@@ -65,7 +65,7 @@ function Home() {
                                     NO
                                 </button>
                             </div>
-                                <button className='btn btn-dark btn-lg' onClick={() => navigate('/yes')}>YES</button>
+                                <button className='btn btn-dark btn-lg' onClick={() => navigate('/valentine/yes')}>YES</button>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ function App() {
                     element: <Home />
                 },
                 {
-                  path: 'yes',
+                  path: '/yes',
                   element :<Yes />
                 }
             ]
