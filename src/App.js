@@ -6,7 +6,7 @@ import Yes from './components/yes'
 import Home from './components/Home';
 function App() {
   return (
-    <Router>
+    <Router basename="/valentine">
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
