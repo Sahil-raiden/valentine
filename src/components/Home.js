@@ -34,7 +34,7 @@ function Home() {
 
     const handleYesClick = () => {
         // Navigate to the Yes component
-        navigate('/valentine/yes');
+        navigate('/yes');
     };
 
     return (

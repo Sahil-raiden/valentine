@@ -1,17 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Yes from './components/Yes'
 import Home from './components/Home';
-import Yes from './components/Yes';
-import RootLayout from './components/RootLayout';
-
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <RootLayout>
-        <Route exact path="/valentine" component={Home} />
-        <Route path="/valentine/yes" component={Yes} />
-      </RootLayout>
+    <Router basename="/valentine">
+      <div className="App">
+        <Routes>
+        <Route path="/" element={<Home />} />
+          <Route path="/Yes" element={<Yes />} />
+      </Routes>
+      </div>
     </Router>
   );
 }
