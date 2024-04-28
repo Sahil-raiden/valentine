@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './components/Home'
-import Yes from './components/yes'
+import Home from './components/Home';
+import Yes from './components/Yes';
 import RootLayout from "./components/RootLayout";
 
 
@@ -16,7 +16,7 @@ function App() {
                     element: <Home />
                 },
                 {
-                  path: '/yes',
+                  path: 'yes',
                   element :<Yes />
                 }
             ]
