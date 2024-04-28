@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import img1 from '../assets/vv.gif';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 function Home() {
+    let navigate = useNavigate();
     const [buttonStyle, setButtonStyle] = useState({});
     const [isMouseOverButton, setIsMouseOverButton] = useState(false);
 
@@ -63,9 +65,7 @@ function Home() {
                                     NO
                                 </button>
                             </div>
-                            <Link to='/Yes'>
-                                <button className='btn btn-dark btn-lg'>YES</button>
-                            </Link>
+                                <button className='btn btn-dark btn-lg' onClick={() => navigate('/valentine/yes')}>YES</button>
                         </div>
                     </div>
                 </div>
