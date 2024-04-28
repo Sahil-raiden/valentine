@@ -1,20 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import Home from './components/Home'
 import Yes from './components/yes'
-import Home from './components/Home';
+import RootLayout from "./components/RootLayout";
+
+
 function App() {
-  return (
-    <Router basename="/valentine">
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Yes" element={<Yes />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    let router = createBrowserRouter([
+        {
+            path: '/valentine',
+            element: <RootLayout />,
+            children: [
+                {
+                    path: '',
+                    element: <Home />
+                },
+                {
+                  path: 'yes',
+                  element :<Yes />
+                }
+            ]
+        }
+    ]);
+    return (
+        <div>
+            <RouterProvider router={router} />
+        </div>
+    )
 }
 
 export default App;
