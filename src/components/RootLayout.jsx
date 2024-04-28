@@ -6,9 +6,6 @@ import { useEffect } from "react"
 
 function RootLayout(){
     let navigate=useNavigate()
-    // useEffect(()=>{
-    //     navigate('home')
-    // })
     return(
         <div>
           
